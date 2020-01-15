@@ -31,8 +31,10 @@ colorPersonalizado.addEventListener('change',
     (function() {
         // Se guarda el color de la rueda en colorActual
         colorActual = colorPersonalizado.value;
-        // Completar para que cambie el indicador-de-color al colorActual
+        alert(colorActual);
 
+        // Completar para que cambie el indicador-de-color al colorActual
+        $("#indicador-de-color").attr("style", colorActual);
 
     })
 );
