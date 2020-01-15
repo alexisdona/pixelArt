@@ -51,6 +51,7 @@ function crearGrillaPixeles() {
     var nuevoDiv;
     for (var i = 0; i < 1750; i++) {
         nuevoDiv = document.createElement('div');
+        //  nuevoDiv.className = 'grilla-pixeles'
         grillaPixeles.appendChild(nuevoDiv);
     }
 }

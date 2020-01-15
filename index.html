@@ -64,11 +64,20 @@
     $(document).ready(function() {
         crearGrillaPixeles();
         crearPaletaColores();
-        alert("llega acá");
-        var $elemento = $(".color-paleta");
+        var $colorPaleta = $(".color-paleta");
         var $pincel = $("#indicador-de-color");
-        $elemento.click(function() {
+        var $colorPincel;
+        var $pixelGrilla = $("#grilla-pixeles div");
+        $colorPaleta.click(function() {
             $pincel.attr("style", $(this).attr("style"));
+            $colorPincel = $pincel.attr("style");
         });
+        $pixelGrilla.click(function() {
+            $(this).attr("style", $colorPincel);
+        });
+
+
+
+
     });
 </script>
