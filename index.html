@@ -70,9 +70,13 @@
         var $colorPincel;
         var $laGrilla = $("#grilla-pixeles");
         var $hijosDeLaGrilla = $("#grilla-pixeles div");
-        console.log("Cantidad de divs en la grilla:" + $hijosDeLaGrilla.length);
         var $pixelGrilla = $("#grilla-pixeles div");
         var $botonBorrar = $("#borrar");
+        console.log("batman tiene: " + batman.length);
+        var $batman = $("#batman");
+        var $wonder = $("#wonder");
+        var $flash = $("#flash");
+        var $invisible = $("#invisible");
 
         $colorPaleta.click(function() {
             $pincel.attr("style", $(this).attr("style"));
@@ -103,5 +107,25 @@
                 }, 500);
             });
         });
+
+        $batman.click(function() {
+            cargarSuperheroe(batman);
+        });
+        $wonder.click(function() {
+            cargarSuperheroe(wonder);
+        });
+
+        $flash.click(function() {
+            cargarSuperheroe(flash);
+        });
+
+        $invisible.click(function() {
+            cargarSuperheroe(invisible);
+        });
+
+
+
+
+
     });
 </script>
