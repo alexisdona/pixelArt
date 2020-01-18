@@ -64,20 +64,44 @@
     $(document).ready(function() {
         crearGrillaPixeles();
         crearPaletaColores();
+        var estaApretado = false;
         var $colorPaleta = $(".color-paleta");
         var $pincel = $("#indicador-de-color");
         var $colorPincel;
+        var $laGrilla = $("#grilla-pixeles");
+        var $hijosDeLaGrilla = $("#grilla-pixeles div");
+        console.log("Cantidad de divs en la grilla:" + $hijosDeLaGrilla.length);
         var $pixelGrilla = $("#grilla-pixeles div");
+        var $botonBorrar = $("#borrar");
+
         $colorPaleta.click(function() {
             $pincel.attr("style", $(this).attr("style"));
             $colorPincel = $pincel.attr("style");
         });
         $pixelGrilla.click(function() {
-            $(this).attr("style", $colorPincel);
+            $(this).attr("style", $("#indicador-de-color").attr("style"));
         });
 
 
+        $laGrilla.mousedown(function() {
+            estaApretado = true;
+        });
+        $laGrilla.mouseup(function() {
+            estaApretado = false;
+        });
 
+        $pixelGrilla.mouseover(function() {
+            if (estaApretado) {
+                $(this).attr("style", $("#indicador-de-color").attr("style"));
+            }
+        });
 
+        $botonBorrar.click(function() {
+            $hijosDeLaGrilla.each(function() {
+                $(this).animate({
+                    "background-color": "white"
+                }, 500);
+            });
+        });
     });
 </script>
