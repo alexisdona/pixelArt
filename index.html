@@ -72,7 +72,7 @@
         var $hijosDeLaGrilla = $("#grilla-pixeles div");
         var $pixelGrilla = $("#grilla-pixeles div");
         var $botonBorrar = $("#borrar");
-        console.log("batman tiene: " + batman.length);
+        var $botonGuardar = $("#guardar");
         var $batman = $("#batman");
         var $wonder = $("#wonder");
         var $flash = $("#flash");
@@ -123,6 +123,9 @@
             cargarSuperheroe(invisible);
         });
 
+        $botonGuardar.click(function() {
+            guardarPixelArt();
+        });
 
 
 
