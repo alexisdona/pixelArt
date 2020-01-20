@@ -108,6 +108,15 @@
             });
         });
 
+        $(".imgs img").click(function(){
+    // referencia a la imagen en la cual hice click
+    var imgActual = $(this);
+    // attributo id de la imagen
+    var attrId = imgActual.attr("id");
+
+    cargarSuperheroe(eval(attrId));
+    });
+/*
         $batman.click(function() {
             cargarSuperheroe(batman);
         });
@@ -122,6 +131,7 @@
         $invisible.click(function() {
             cargarSuperheroe(invisible);
         });
+        */
 
         $botonGuardar.click(function() {
             guardarPixelArt();
